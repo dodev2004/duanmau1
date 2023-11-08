@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./asset/reset.css">
+    <link rel="stylesheet" href="./asset/base.css">
+    <link rel="stylesheet" href="./asset/home.css">
+</head>
+
+<body>
+    <section class="wrapper">
+        <header>
+            <section class="header-top">
+                <img src="./view/img/header_top_banner.PNG" alt="">
+            </section>
+            <section class="header_middle">
+                <section class="container active">
+                    <section class="header_middle-content">
+
+                        <section class="logo">
+                            <span>Đông Đô </span>
+                        </section>
+                        <section class="header_middle-seach">
+                            <section class="seach_category">
+                                Chọn danh mục
+                                <i class="fa-solid fa-caret-down"></i>
+                            </section>
+                            <section class="header_seach-text">
+                                <input type="text" name="seach_product" placeholder="Bạn cần tìm gì hôm nay...">
+
+
+                            </section>
+                            <section class="header_seach-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </section>
+
+                        </section>
+                        <section class="header_middle-right">
+                            <section class="header_middle-contact">
+                                <i class="fa-solid fa-phone"></i>
+                                <strong>03368465119</strong>
+                            </section>
+                            <section class="header_middle-user">
+                                <i class="fa-solid fa-user"></i>
+                                <span>Đăng nhập</span>
+                                <section class="user_drowdown">
+                                    <nav>
+                                        <a href="">Cập nhật thông tin</a>
+                                        <a href="">Truy cập Admin</a>
+                                        <a href="">Đăng xuất</a>
+                                    </nav>
+                                </section>
+                            </section>
+                            <section class="header_middle-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Giỏ hàng</span>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+     
+    </section>
+</header>
+<main>
+    <section class="container">
+        <section class="product_linked">
+            <a href="">
+                <span class="linked">Trang Chủ</span>
+            </a>
+            <i class="fa-solid fa-angle-right"></i>
+            <a href="">
+                <span class="linked">Danh Sách Sản Phẩm</span>
+            </a>
+        </section>
+        <section class="quantity_seach">
+            <span>Có bao nhiêu kết quả</span>
+        </section>
+        <section class="product">
+            <section class="product_detail">
+                <section class="product_detail-img">
+                    <section class="product_detail-primary">
+                        <img src="./view/img/<?php echo $detail["image"] ?>" alt="">
+                    </section>
+
+                    <section class="product_detail-slider">
+                        <section class="product_detail-slider-item">
+                            <img src="./view/img/<?php echo $detail["image"] ?>" alt="">
+                        </section>
+
+                    </section>
+                </section>
+                <section class="prodcut_detail-content">
+                    <form id="form-1" action="index.php?act= " method="post">
+                        <section class="product_detail-name">
+                            <label for="product_name"><?php echo $detail["ten_sanPham"] ?></label>
+                            <input type="text" id="product_name" value="<?php echo $detail["ten_sanPham"] ?>">
+                        </section>
+                        <section class="product_detail-price">
+                            <label for="">Giá tiền: <span><?php echo number_format($detail["price"],0,',',',') ?></span></label>
+                            <input type="text" id="product_price" value="<?php echo $detail["price"] ?>">
+                        </section>
+                        <section class="product_quantity"  >
+                            <span>Số lượng</span>
+                            <section class="product_detail-quantity">
+                                <button type="button" class="quantity_reducer">-</button>
+                                <input type="text" name="quantity" value="1">
+                                <button type="button" class="quantity_increase">+</button>
+                            </section>
+                        </section>
+                       
+                        <section class="product_detail-buy">
+                            <button type="submit" name="submit" class="btn_cart">
+                                <span>Thêm vào giỏ hàng</span>
+                            </button>
+                            <button type="submit" name="submit" class="btn_buy">
+                                <span>Mua ngay</span>
+                            </button>
+                        </section>
+                    </form>
+
+                </section>
+            </section>
+            <section class="product_detail-midle">
+                <span class="task_midle"></span>
+                <section class="product_detail-midle-left">
+                    <section class="product_detail-item">
+                        <section data-index="1" class="product_content">
+                            <span>Mô Tả Sản Phẩm</span>
+                        </section>
+                        <section data-index="2" class="product_content">
+                            <span>Điều Khoản Bảo Hành</span>
+                        </section>
+                    </section>
+                    <section data-index="1" class="product_midle-content">
+                        <p>
+                        <?php echo trim($detail["mota"]) ? $detail["mota"] : "Đang cập nhật" ?>
+                        </p>
+                    </section>
+                    <section data-index="2" class="product_midle-content active">
+                        <p>
+                            Đang cập nhật
+                        </p>
+                    </section>
+
+                </section>
+                <section class="product_detail-midle-right">
+                        <h3>THÔNG SỐ KĨ THUẬT</h3>
+                        <span>Đang Cập Nhật</span>
+                </section>
+            </section>
+        </section>
+        <section class="comment">
+            <h1>Bình Luận</h1>
+                <form action="" method="post" class="coment_user">
+                    <input type="text" name="comment" placeholder="Hãy để lại ý kiến ở mục này">
+                </form>
+                <section class="comment_content">
+                        <span class="comment-title">Đánh giá sản phẩm X</span>
+                        <section class="comment_contnet-list">
+                            <section class="comment_user-content">
+                                <span>Bùi Ngọc Đô</span>
+                                <span>Rất hay ạ</span>
+                            </section>
+                            <section class="coment_user-timer">
+                                2023/10/31
+                            </section>
+                        </section>
+
+                </section>
+        </section>
+        <section class="product_item product_new">
+            <h1>Sản Phẩm Tương Tự</h1>
+            <section class="row product-hot ">
+
+                <section class="column c-4">
+                    <a href="">
+                        <article class="product_not_sell">
+                            <section class="product_img">
+                                <img src="./view/img/prodcut/636863636051023338-ss-galaxy-s10-plus-den-1.webp"
+                                    alt="">
+                            </section>
+                            <section class="product_name">
+                                <span>Điện thoại Samsung Galaxy S10+</span>
+                            </section>
+                            <section class="product_price">
+                                <span class="price">4.500.000d</span>
+                            </section>
+                            <a class="cart_buy" href="">
+                                <button>Mua Hàng</button>
+                            </a>
+                            <a class="add_buy" href="">
+                                <button>Thêm giỏ hàng</button>
+                            </a>
+                        </article>
+                    </a>
+                </section>
+                <section class="column">
+                    <a href="">
+                        <article class="product_not_sell">
+                            <section class="product_img">
+                                <img src="./view/img/prodcut/636863636051023338-ss-galaxy-s10-plus-den-1.webp"
+                                    alt="">
+                            </section>
+                            <section class="product_name">
+                                <span>Điện thoại Samsung Galaxy S10+</span>
+                            </section>
+                            <section class="product_price">
+                                <span class="price">4.500.000d</span>
+                            </section>
+                            <a class="cart_buy" href="">
+                                <button>Mua Hàng</button>
+                            </a>
+                            <a class="add_buy" href="">
+                                <button>Thêm giỏ hàng</button>
+                            </a>
+                        </article>
+
+                </section>
+                <section class="column">
+                    <a href="">
+                        <article class="product_not_sell">
+                            <section class="product_img">
+                                <img src="./view/img/prodcut/636863636051023338-ss-galaxy-s10-plus-den-1.webp"
+                                    alt="">
+                            </section>
+                            <section class="product_name">
+                                <span>Điện thoại Samsung Galaxy S10+</span>
+                            </section>
+                            <section class="product_price">
+                                <span class="price">4.500.000d</span>
+                            </section>
+                            <a class="cart_buy" href="">
+                                <button>Mua Hàng</button>
+                            </a>
+                            <a class="add_buy" href="">
+                                <button>Thêm giỏ hàng</button>
+                            </a>
+                        </article>
+
+                </section>
+                <section class="column">
+                    <a href="">
+                        <article class="product_not_sell">
+                            <section class="product_img">
+                                <img src="./view/img/prodcut/636863636051023338-ss-galaxy-s10-plus-den-1.webp"
+                                    alt="">
+                            </section>
+                            <section class="product_name">
+                                <span>Điện thoại Samsung Galaxy S10+</span>
+                            </section>
+                            <section class="product_price">
+                                <span class="price">4.500.000d</span>
+                            </section>
+                            <a class="cart_buy" href="">
+                                <button>Mua Hàng</button>
+                            </a>
+                            <a class="add_buy" href="">
+                                <button>Thêm giỏ hàng</button>
+                            </a>
+                        </article>
+
+                </section>
+
+
+            </section>
+        </section>
+    </section>
+   
+</main>
+    </section>
+    <script src="./asset/js/form.js">
+       
+    </script>
+</body>
+
+</html>

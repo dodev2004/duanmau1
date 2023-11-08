@@ -1,0 +1,428 @@
+textarea{
+    outline: none;
+}
+.container{
+    background-color: #f5f6f8;
+    
+
+}
+
+html{
+    font-size: 100% !important;
+}
+*{
+    font-family: 'Poppins', sans-serif !important;
+    
+}
+body{
+    background-color: #f5f6f8;
+}
+.admin{
+
+}
+.admin-content{
+
+}
+.admin-row{
+    display: flex;
+}
+.admin-colum_left{
+  
+}
+.column-left_content{
+    background-color: white ;
+    padding: 0.8rem 1.2rem 1.2rem 1.2rem;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 6px 0px 18px 0px rgba(0, 0, 0, 0.06);
+}
+.admin-name{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #109CF1;
+    line-height: 1.6rem;
+    margin-bottom: 3.1999999999999993rem;
+}
+.admin-personal{
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid  #192a3e37;
+}
+.admin-personal_img{
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    overflow: hidden
+}
+.admin-personal_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.admin-personal_detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.detail_name{
+color: #192A3E;
+font-size: 1rem;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.detail_locator{
+    color: #90A0B7;
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.011rem;
+}
+.admin-component{
+    
+}
+.admin-component_list{
+   
+}
+.admin-component_item{
+   
+    display: flex;
+    margin-bottom: 0.4rem;
+    align-items: center;
+   
+    transition: 0.25s;
+
+}
+.admin-component_item a{
+    text-decoration: none;
+    color: #192a3ebe;
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1rem;
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+
+}
+.admin-component_item a:hover{
+    background-color: #ccccccd2;
+    color: #109CF1;
+}
+
+.admin-column_right{
+    margin-left: 16.9rem;
+    position: relative;
+    height: 100vh;
+    flex: 1;
+}
+.admin-column_right{
+padding: 2rem;
+}
+.admin-column_right--title{
+    color: #6B6B6B;
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.07rem;
+    line-height: normal;
+}
+.admin-column_right--linked{
+    color: #109CF1;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.07rem;
+    padding-bottom: 1.5rem;
+    color: #1a3342;
+}
+/* List danh muc */
+
+table{
+    width: 100%;
+    background-color: white;
+    position: relative;
+    
+}
+.table{
+    margin-top: 1rem;
+    border-radius: 2rem;
+}
+.table-category tr:nth-child(2n) th:nth-child(1){
+    width: 10%;
+}
+.table-category tr:nth-child(2n) th:nth-child(2){
+    width: 20%;
+}
+.table-category tr:nth-child(2n) th:nth-child(3){
+    width: 45%;
+}
+.table-category tr:nth-child(2n) th:nth-child(4){
+    width: 25%;
+}
+table tr th{
+    font-size: 0.9rem;
+    color: #192A3E;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ccccccd2;
+    font-weight: 500;
+    font-size: 12px;
+}
+table tr:nth-child(1){
+  color: #192A3E;
+}
+input[name="xoa"] ,input[name="sua"]{
+    color: white;
+    background-color: #192A3E;
+    width: 5rem;
+    border-radius: 0.4rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+
+}
+input[name="them"]{
+    padding: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+    background-color: #192A3E;
+    
+    border-radius: 0.4rem;  
+    cursor: pointer;
+}
+/* Them danh muc */
+form{
+    position: relative;
+    margin: 5rem auto;
+  
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    overflow: hidden;
+    background: white;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.form_group{
+    padding: 0.9rem 1rem;
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+}
+.form_group > label{
+    color: #586870;
+    font-size: 0.7rem;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 1.2rem;
+}
+.form_group >input{
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+    border: 0.05rem solid  #C0C6C9;
+    background: #FFF;
+    color: #192A3E;
+   outline: none;
+   transition: 0.25s;
+}
+.form_group >input:focus{
+    border: 1px solid #109bf1a7;
+ 
+}
+input[type="submit"]{
+    cursor: pointer;
+    outline: none;
+    color: #192A3E;
+    border-radius: 1rem;
+    padding: 0.2rem 0.7rem;
+ background-color: #152C70;
+ color:white ;
+ border: unset;
+ font-weight: 600;
+ display: block;
+ text-align: center;
+}
+.form_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem 0;
+    background-color: #152C70;
+    color: white;
+    
+}
+.submit{
+    display: flex;
+    justify-content: end;
+    padding-right: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+.product{
+    padding-top: 20px;
+}
+th{
+    vertical-align: middle !important;
+}
+.header_bottom-category.active:hover.header_bottom-list{
+    opacity: 0;
+}
+.sign_up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.sign_up form{
+    width: 400px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    overflow: hidden;
+    border-radius: 4px;
+    margin: 0 auto !important;
+}
+form h1{
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #231f20;
+    text-align: center;
+    font-size: 30px;
+}
+.description_signin{
+    text-align: center;
+    margin-top: 17px;
+    line-height: 14px;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+.form_signup{
+    margin-bottom: 10px;
+    padding: 0px 12px 0  12px;
+}
+.form_signup label{
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+.form_signup:last-child{
+    color: red;
+    margin-bottom: 26px;
+}
+.form_signup input{
+  
+    height: 27px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px 12px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+.form_signup .error_message{
+    color: red;
+    font-size: 12px;
+}
+.form_signup{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    column-gap: 2px;
+
+}
+.form_signup input[type=submit]{
+    color: white;
+    background-color: #152C70;
+    width: 150px;
+    font-weight: 600;
+    font-size: 14px;
+    height: 38px;
+  
+
+}
+/* bieu do */
+#piechart{
+   
+    height: 400px !important;
+}
+#piechart svg rect {
+    fill:#f5f6f8;
+}
+.tk_sp{
+    text-align: end;
+    background-color: white;
+    padding-right: 20px;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+.tk_sp span {
+    color: #152C70;
+    
+}
+.pagin{
+background: white;
+  padding-top: 20px;
+  padding-bottom: 17px;
+
+  display: flex;
+  justify-content: end;
+  column-gap: 4px;
+}
+.pagin a {
+    padding: 5px 19px;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 4px;
+  border: 1px solid;
+  color: #192A3E;
+
+}
+.admin_login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+header .admin_title{
+    color: #152C70;
+    font-size: 30px;
+    font-weight: bold;
+}
+.sign_up{
+ 
+    margin-top: 0;
+}
+.sign_up form {
+    background-color: white;
+    box-shadow: 0 0 7px #192a3e2e;
+}
+form h1{
+    text-transform: uppercase;
+  font-weight: 600;
+  color: #231f20;
+  text-align: center;
+  font-size: 25px;
+}
+.form_signup input:focus{
+    border: 1px solid #152C70;
+}
+.form_signup input {
+    height: 39px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px 12px;
+    outline: none;
+    border: 1px solid #ccc;
+    transition: 0.25s;
+}
+.logout{
+    position: absolute;
+    bottom: 28px;
+}
