@@ -17,18 +17,11 @@ html{
 body{
     background-color: #f5f6f8;
 }
-.admin{
 
-}
-.admin-content{
-
-}
 .admin-row{
     display: flex;
 }
-.admin-colum_left{
-  
-}
+
 .column-left_content{
     background-color: white ;
     padding: 0.8rem 1.2rem 1.2rem 1.2rem;
@@ -83,12 +76,7 @@ line-height: normal;
     line-height: normal;
     letter-spacing: 0.011rem;
 }
-.admin-component{
-    
-}
-.admin-component_list{
-   
-}
+
 .admin-component_item{
    
     display: flex;

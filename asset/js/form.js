@@ -1,4 +1,4 @@
-const form = document.querySelector(".sign_up form");
+var form = document.querySelector(".sign_up form");
 if(form){
     const inputs = Array.from(form.querySelectorAll("input"));
     const submit = form.querySelector("input[name=submit]");
@@ -58,11 +58,21 @@ if(form){
             let message = checkNull(value);
             if(message){
                 erorMessage.innerText= message;
-                checked = false
+                checked = false;
             }
             else {
                 erorMessage.innerText= message;
-             
+            }
+            if(coundownCode((sessionStorage.getItem("time")))){
+                if(coundownCode((sessionStorage.getItem("time"))) <=0){
+                    alert("Code của bạn đã hết hạn vui lòng ấn gửi lại");
+                    checked = false;
+                    console.log(coundownCode((sessionStorage.getItem("time"))))
+                }
+                else {
+                    checked = true;
+                    
+                }
             }
         })
         if(repeatPass){
